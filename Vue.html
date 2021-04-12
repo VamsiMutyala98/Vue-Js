@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virtual DOM</title>
+        <style>
+            .div{
+                border: 2px solid gray;
+                margin: 100px 20px 20px 35%;
+                width:30%;
+                border-radius: 5px;
+            }
+            label{
+                font-size: 20px;
+                font-family: sans-serif;
+                margin: 10px 0px 0px 20px;
+            }
+            input{
+                width: 87%;
+                border: 2px solid gray;
+                padding: 10px;
+                margin: 5px 0px 10px 20px;
+                border-radius: 5px;
+            }
+            button{
+                width:92%;
+                border: 2px solid gray;
+                padding: 10px;
+                margin: 10px 0px 20px 20px;
+                border-radius: 5px;
+            }
+            h1{
+                margin:10px 0px 10px 15px;
+            }
+            h1::first-letter{
+                color: green;
+                font-size: 40px;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div">
+            <h1>Qproducts</h1>
+            <label><b>UserName: </b></label><br>
+            <input type="text" placeholder="UserName"><br>
+            <label><b>Password: </b></label><br>
+            <input type="password" placeholder="password"><br>
+            <button><a href="https://www.google.com/">Sign In</a></button>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script>
+            const VirtualDom={
+                "tag":"div",
+                "attributes":{
+                    "class":"div"
+                },
+                "children":[{
+                    "tag":"h1",
+                    "children":"Qproducts"
+                    },
+
+                    {"tag":"label","children":[{
+                    "tag":"b",
+                    "children":"UserName"
+                    }]
+                    },
+                {"tag":"br"},
+                {"tag":"input","attributes":{
+                    "type":"text",
+                    "placeholder":"UserName"
+                }},
+                {"tag":"br"},
+                {"tag":"label","children":[{
+                    "tag":"b",
+                    "children":"Password"
+                }]},
+                {"tag":"br"},
+                {"tag":"input","attributes":{
+                    "type":"text",
+                    "placeholder":"password"
+                }},
+                {"tag":"br"},
+                {"tag":"button","children":[{
+                    "tag":"a",
+                    "attributes":{
+                        "href":"https://www.google.com/"
+                    },
+                    "children":"Sign-In"}]
+                }]
+            }
+        </script>
+    </body>
+</html>
